@@ -1,0 +1,55 @@
+.keyfo-view {
+    min-height: 20vh;
+}
+
+.keyfo-keyboard.container {
+    max-width: 1000px;
+}
+
+.key {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    background: #fefefe;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: #5a5a5a;
+    border-radius: 5px;
+    margin: 4px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+    transition: .1s;  
+}
+
+.key:hover,
+.key.active {
+    /* border: 2px solid rgb(255, 236, 139); */
+    background: rgb(41, 41, 41);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.key .top {
+    font-size: x-small;
+    color: grey;
+}
+
+[data-key~="space"] {
+     /* width: 350px; */
+}
+
+[data-key~="caps"] {
+    /* width: 100px; */
+}
+
+[data-key~="tab"] {
+    /* width: 100px; */
+}
+
+[data-key~="enter"] {
+    /* width: 150px; */
+}
