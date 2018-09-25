@@ -1,11 +1,8 @@
 "use strict";
 
 function removeTransition(e) {
-    if( e.propertyName !== 'transform' ) return;
-
     e.target.classList.remove('active');
 }
-
 
 function getKeys(e) {
     const getKey = document.querySelector(`.key[data-key="${e.which}"]`);
@@ -15,13 +12,18 @@ function getKeys(e) {
         return;
     }
     
-       console.log(e);
     getKey.classList.add('active');
-    keyview.innerHTML += `${e.key}`;
-    
+    eventKey.innerHTML = `${e.key}`;
+    eventWhich.innerHTML = charCode.innerHTML = `${e.which}`;
+    eventCode.innerHTML = `${e.code}`;
 }
 
 const keyview = document.querySelector('.keyfo-view');
+const eventKey = document.querySelector('.event-key');
+const eventWhich = document.querySelector('.event-which');
+const eventCode = document.querySelector('.event-code');
+const charCode = document.querySelector('.charcode');
+
 let keys = Array.from(document.querySelectorAll('.key'));
 keys.forEach( key => key.addEventListener('transitionend', removeTransition));
 window.addEventListener('keydown', getKeys );
