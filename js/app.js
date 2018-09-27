@@ -1,31 +1,27 @@
 "use strict";
 
-function removeTransition(e) {
-    e.target.classList.remove('active');
-}
-
-function getKeys(e) {
-    const getKey = document.querySelector(`.key[data-key="${e.which}"]`);
-
-    if(e.metaKey || !getKey ) {
-        e.preventDefault();
-        return;
-    }
+window.addEventListener('DOMContentLoaded', (evt) => { 
     
-    getKey.classList.add('active');
-    eventKey.innerHTML = `${e.key}`;
-    eventWhich.innerHTML = charCode.innerHTML = `${e.which}`;
-    eventCode.innerHTML = `${e.code}`;
-}
+    const eventWhich = document.querySelector('.event-which');
+    const eventCode = document.querySelector('.event-code');
+    const charCode = document.querySelector('.charcode');
+    let keys = Array.from(document.querySelectorAll('[data-key]'));
+    
+    keys.forEach( key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', getKeys );
 
-const keyview = document.querySelector('.keyfo-view');
-const eventKey = document.querySelector('.event-key');
-const eventWhich = document.querySelector('.event-which');
-const eventCode = document.querySelector('.event-code');
-const charCode = document.querySelector('.charcode');
+    function removeTransition(e) {
+        e.target.classList.remove('active');
+    }
 
-let keys = Array.from(document.querySelectorAll('.key'));
-keys.forEach( key => key.addEventListener('transitionend', removeTransition));
-window.addEventListener('keydown', getKeys );
+    function getKeys(e) {
+        const getKey = document.querySelector(`[data-key="${e.which}"]`);
 
-// const keys = document.querySelector('.key');
+        if(e.metaKey || !getKey ) 
+            return;
+        
+        getKey.classList.add('active');
+        eventWhich.innerHTML = charCode.innerHTML = `${e.which}`;
+        eventCode.innerHTML = `${e.code}`;
+    }
+});

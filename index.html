@@ -8,54 +8,50 @@
         <title>KeyFO</title>
     </head>
     
-    <body>
-        
-        <!-- header -->
-        <header class="main-header">
-            <div class="container">
+    <body class="d-flex flex-column bg-light">
+
+        <nav class="navbar navbar-expand-lg navbar-light mb-3">
+            <div class="container-fluid">
                 <div class="row">
-                    <!-- logo -->
-                    <div class="site-info col-6">
-                        <h1 class="site-logo">KeyFO</h1>
-                    </div>   
-                    <!-- small menu -->
-                    <div class="site-nav col-6 d-flex justify-content-end">
-                        <nav class="main-navigation d-flex justify-content-between">
-                            <a href="">About</a>
-                            <a href="">Projects</a>
-                            <a href="">Contact</a>
-                        </nav>
-                    </div>
-                </div>    
+            <a class="navbar-brand font-weight-bold" href="#">KeyFO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                </ul> 
             </div>
-        </header>
+        </div> 
+        </nav>
+            
 
         <main>
-            
-            <div class="keyfo-keyboard container">
-                
+            <div class="keyfo-keyboard container mb-4"> 
                 <div class="row">
                     <div class="col">
-                        <h1 class="display-1 charcode"></h1>
+                        <div class="display-3 text-center font-weight-bold m-2">
+                            Key Code: 
+                            <span class="charcode"></span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-header">
-                                <h2 class="event-key"></h2>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title">
-                                    event.key
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
                     
                     <div class="col">
-                        <div class="card">
+                        <div class="card text-center">
                             <div class="card-header">
                                 <h2 class="event-which"></h2>
                             </div>
@@ -67,18 +63,18 @@
                         </div>
                     </div>
 
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2 class="event-code"></h2>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title">
-                                        event.code
-                                    </h3>
-                                </div>
+                    <div class="col text-center">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="event-code"></h2>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    event.code
+                                </h3>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>    
             
@@ -86,81 +82,81 @@
             <div class="keyfo-keyboard container">
                 
                 <div class="key-row row d-flex flex-nowrap justify-content-between">
-                    <div class="key" data-key="192"><span class="top">~</span><span class="bottom">`</span></div>
-                    <div class="key" data-key="49"><span class="top">!</span>  <span class="bottom"></span> 1 </span></div>
-                    <div class="key" data-key="50"><span class="top">@</span>  <span class="bottom"></span> 2 </span></div>
-                    <div class="key" data-key="51"><span class="top">#</span>  <span class="bottom"></span> 3 </span></div>
-                    <div class="key" data-key="52"><span class="top">$</span>  <span class="bottom"></span> 4 </span></div>
-                    <div class="key" data-key="53"><span class="top">%</span>  <span class="bottom"></span> 5 </span></div>
-                    <div class="key" data-key="54"><span class="top">^</span>  <span class="bottom"></span> 6 </span></div>
-                    <div class="key" data-key="55"><span class="top">&</span>  <span class="bottom"></span> 7 </span></div>
-                    <div class="key" data-key="56"><span class="top">*</span>  <span class="bottom"></span> 8 </span></div>
-                    <div class="key" data-key="57"><span class="top">(</span>  <span class="bottom"></span> 9 </span></div>
-                    <div class="key" data-key="48"><span class="top">)</span>  <span class="bottom"></span> 0 </span></div>
-                    <div class="key" data-key="189"><span class="top">-</span> <span class="bottom"></span> _ </span></div>
-                    <div class="key" data-key="187"><span class="top">+</span> <span class="bottom"></span> = </span></div>
-                    <div class="key flex-grow-1" data-key="8"><span class="top"> delete</span> <span class="bottom">&LeftArrow;</span></div>
+                    <div data-key="192"><span>~</span> <span> ` </span></div>
+                    <div data-key="49"><span>!</span>  <span> 1 </span></div>
+                    <div data-key="50"><span>@</span>  <span> 2 </span></div>
+                    <div data-key="51"><span>#</span>  <span> 3 </span></div>
+                    <div data-key="52"><span>$</span>  <span> 4 </span></div>
+                    <div data-key="53"><span>%</span>  <span> 5 </span></div>
+                    <div data-key="54"><span>^</span>  <span> 6 </span></div>
+                    <div data-key="55"><span>&</span>  <span> 7 </span></div>
+                    <div data-key="56"><span>*</span>  <span> 8 </span></div>
+                    <div data-key="57"><span>(</span>  <span> 9 </span></div>
+                    <div data-key="48"><span>)</span>  <span> 0 </span></div>
+                    <div data-key="189"><span>-</span> <span> _ </span></div>
+                    <div data-key="187"><span>+</span> <span> = </span></div>
+                    <div data-key="8" class="key flex-grow-1"><span> delete</span> <span >&LeftArrow;</span></div>
                 </div>
 
                 <div class="key-row row d-flex flex-nowrap justify-content-between">
-                    <div class="key flex-grow-1" data-key="9 tab">&leftrightarrows; tab</div>
-                    <div class="key" data-key="81">Q</div>
-                    <div class="key" data-key="87">W</div>
-                    <div class="key" data-key="69">E</div>
-                    <div class="key" data-key="82">R</div>
-                    <div class="key" data-key="84">T</div>
-                    <div class="key" data-key="89">Y</div>
-                    <div class="key" data-key="85">U</div>
-                    <div class="key" data-key="73">I</div>
-                    <div class="key" data-key="79">O</div>
-                    <div class="key" data-key="80">P</div>
-                    <div class="key" data-key="219"><span class="top">{</span> <span class="bottom">[</span></div>
-                    <div class="key" data-key="221"><span class="top">}</span> <span class="bottom">]</span></div>
-                    <div class="key" data-key="220"><span class="top">|</span> <span class="bottom">\</span></div>
+                    <div data-key="9 tab" class="key flex-grow-1">&leftrightarrows; tab</div>
+                    <div data-key="81">Q</div>
+                    <div data-key="87">W</div>
+                    <div data-key="69">E</div>
+                    <div data-key="82">R</div>
+                    <div data-key="84">T</div>
+                    <div data-key="89">Y</div>
+                    <div data-key="85">U</div>
+                    <div data-key="73">I</div>
+                    <div data-key="79">O</div>
+                    <div data-key="80">P</div>
+                    <div data-key="219"><span >{</span> <span>[</span></div>
+                    <div data-key="221"><span >}</span> <span>]</span></div>
+                    <div data-key="220"><span >|</span> <span>\</span></div>
                 </div>
                 <div class="key-row row d-flex flex-nowrap justify-content-between">
                     <div class="key flex-grow-1" data-key="20 caps">caps lock</div>
-                    <div class="key" data-key="65">A</div>
-                    <div class="key" data-key="83">S</div>
-                    <div class="key" data-key="68">D</div>
-                    <div class="key" data-key="70">F</div>
-                    <div class="key" data-key="71">G</div>
-                    <div class="key" data-key="72">H</div>
-                    <div class="key" data-key="74">J</div>
-                    <div class="key" data-key="75">K</div>
-                    <div class="key" data-key="76">L</div>
-                    <div class="key" data-key="186"><span class="top">:</span> <span class="bottom">;</span></div>
-                    <div class="key" data-key="222"><span class="top">"</span> <span class="bottom">'</span></div>
-                    <div class="key flex-grow-1" data-key="13"><span class="top">enter</span> <span class="bottom">return ↵</span></div>
+                    <div data-key="65">A</div>
+                    <div data-key="83">S</div>
+                    <div data-key="68">D</div>
+                    <div data-key="70">F</div>
+                    <div data-key="71">G</div>
+                    <div data-key="72">H</div>
+                    <div data-key="74">J</div>
+                    <div data-key="75">K</div>
+                    <div data-key="76">L</div>
+                    <div data-key="186"><span >:</span> <span>;</span></div>
+                    <div data-key="222"><span >"</span> <span>'</span></div>
+                    <div data-key="13" class="key flex-grow-1"><span >enter</span> <span >return ↵</span></div>
                 </div>
                 <div class="key-row row d-flex flex-nowrap justify-content-between">
-                    <div class="key flex-grow-1" data-key="16">shift</div>
-                    <div class="key" data-key="90">Z</div>
-                    <div class="key" data-key="88">X</div>
-                    <div class="key" data-key="67">C</div>
-                    <div class="key" data-key="86">V</div>
-                    <div class="key" data-key="66">B</div>
-                    <div class="key" data-key="78">N</div>
-                    <div class="key" data-key="77">M</div>
-                    <div class="key" data-key="188"><span class="top">&lt; </span> <span class="bottom">, </span></div>
-                    <div class="key" data-key="190"><span class="top">&gt; </span> <span class="bottom">.</span></div>
-                    <div class="key" data-key="191"><span class="top">? </span> <span class="bottom">/</span></div>
-                    <div class="key flex-grow-1" data-key="16 shift">shift</div>
+                    <div data-key="16" class="key flex-grow-1">shift</div>
+                    <div data-key="90">Z</div>
+                    <div data-key="88">X</div>
+                    <div data-key="67">C</div>
+                    <div data-key="86">V</div>
+                    <div data-key="66">B</div>
+                    <div data-key="78">N</div>
+                    <div data-key="77">M</div>
+                    <div data-key="188"><span >&lt; </span> <span>, </span></div>
+                    <div data-key="190"><span >&gt; </span> <span> .</span></div>
+                    <div data-key="191"><span >? </span> <span >/</span></div>
+                    <div data-key="16 shift" class="key flex-grow-1">shift</div>
                 </div>
                 <div class="key-row row d-flex flex-nowrap justify-content-center">
-                    <div class="key" data-key="17">l-ctrl</div>
-                    <div class="key" data-key="18">l-alt</div>
-                    <div class="key flex-grow-1 flex-fill" data-key="32">space</div>
-                    <div class="key" data-key="93">r-ctrl</div>
-                    <div class="key" data-key="18">r-alt</div>
-                    <div class="key" data-key="37">&leftarrow;</div>
-                    <div class="key" data-key="38 40">&uparrow; &downarrow;</div>
-                    <div class="key" data-key="39">&rightarrow;</div>
+                    <div data-key="17">l-ctrl</div>
+                    <div data-key="18">l-alt</div>
+                    <div data-key="32" class="flex-grow-1 flex-fill">space</div>
+                    <div data-key="93">r-ctrl</div>
+                    <div data-key="18">r-alt</div>
+                    <div data-key="37">&leftarrow;</div>
+                    <div data-key="38 40">&uparrow; &downarrow;</div>
+                    <div data-key="39">&rightarrow;</div>
                 </div>
             </div>
             </div>
         </main>
-        <footer class="main-footer">
+        <footer class="main-footer bg-dark text-muted p-2 mt-auto">
             <div class="container">
 
                 <div class="row">
